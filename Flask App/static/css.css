@@ -1,0 +1,71 @@
+input[type=radio]
+    {
+        width: 40px;
+        height: 30px;
+    }
+    #models label
+    {
+        font-size: 50px;
+        color: black;
+    }
+    input[type=number]
+    {
+        width: 40%;
+        height: 8%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: block;
+        border: 2px solid blue;
+        border-radius: 15px;
+    }
+    input[type=submit] {
+        width: 15%;
+        background-color: #4CAF50;
+        color: white;   
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: blue;
+    }
+    h3{
+        color:black;
+    }
+
+    #headings {
+        font-size: 35px;
+        font-family: cursive;
+        color: red;
+    }
+
+
+
+    #form h1{
+        font-size: 50px;
+        color: blue;
+    }
+
+    #models h1{
+        font-size: 60px;
+        color: olivedrab;
+    }
+
+    body {
+        background-image: url('/static/cancer.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    fieldset {
+        width: 98%;
+        padding: 10px;
+        border: none;
+    }
+    label{
+        font-size: 30px;
+        color: slateblue;
+    }

@@ -1,0 +1,110 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css.css">
+    <title>Breast Cancer Predictor</title>
+</head>
+
+<body>
+    <header>
+        <div id="headings">
+            <center>
+                <h1>Breast Cancer Prediction<br>by Machine Learning</h1>
+            </center>
+        </div>
+    </header>
+    <div id='form'>
+        <form method="GET" action="/predict" enctype="multipart/form-data">
+            <fieldset id="models">
+                <center>
+                    <h1>Select Machine Learning Model</h1>
+                    <input type="radio" id="gcv" name="model" value="gcv" required>
+                    <label for="male">Grid Search CV</label>
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    <input type="radio" id="svc" name="model" value="svc" required>
+                    <label for="female">Support Vector Classifier</label>
+                </center>
+            </fieldset>
+            <br>
+            <fieldset>
+                <center>
+                    <h1>Enter the details of patient's breast</h1>
+                    <label for="mean_radius">Mean radius</label>
+                    <input type="number" step="0.004" name="mean_radius" placeholder="Mean radius" required>
+                    <label for="mean_texture">Mean texture</label>
+                    <input type="number" step="0.004" name="mean_texture" placeholder="Mean texture" required>
+                    <label for="mean_perimeter">Mean perimeter</label>
+                    <input type="number" step="0.004" name="mean_perimeter" placeholder="Mean perimeter" required>
+                    <label for="mean_area">Mean area</label>
+                    <input type="number" step="0.004" name="mean_area" placeholder="Mean area" required>
+                    <label for="mean_smoothness">Mean smoothness</label>
+                    <input type="number" step="0.004" name="mean_smoothness" placeholder="Mean smoothness" required>
+                    <label for="mean_compactness">Mean compactness</label>
+                    <input type="number" step="0.004" name="mean_compactness" placeholder="Mean compactness" required>
+                    <label for="mean_concavity">Mean concavity</label>
+                    <input type="number" step="0.004" name="mean_concavity" placeholder="Mean concavity" required>
+                    <label for="mean_concavepoints">Mean concave points</label>
+                    <input type="number" step="0.004" name="mean_concavepoints" placeholder="Mean concave points"
+                        required>
+                    <label for="mean_symmetry">Mean symmetry</label>
+                    <input type="number" step="0.004" name="mean_symmetry" placeholder="Mean symmetry" required>
+                    <label for="mean_fractal_dimension">Mean fractal dimension</label>
+                    <input type="number" step="0.004" name="mean_fractal_dimension" placeholder="Mean fractal dimension"
+                        required>
+                    <label for="radius_error">Radius Error</label>
+                    <input type="number" step="0.004" name="radius_error" placeholder="Radius Error" required>
+                    <label for="texture_error">Texture Error</label>
+                    <input type="number" step="0.004" name="texture_error" placeholder="Texture Error" required>
+                    <label for="perimeter_error">Perimeter Error</label>
+                    <input type="number" step="0.004" name="perimeter_error" placeholder="Perimeter Error" required>
+                    <label for="area_error">Area Error</label>
+                    <input type="number" step="0.004" name="area_error" placeholder="Area Error" required>
+                    <label for="smoothness_error">Smoothness Error</label>
+                    <input type="number" step="0.004" name="smoothness_error" placeholder="Smoothness Error" required>
+                    <label for="compactness_error">Compactness Error</label>
+                    <input type="number" step="0.004" name="compactness_error" placeholder="Compactness Error" required>
+                    <label for="concavity_error">Concavity Error</label>
+                    <input type="number" step="0.004" name="concavity_error" placeholder="Concavity Error" required>
+                    <label for="concave_points_error">Concave Points Error</label>
+                    <input type="number" step="0.004" name="concave_points_error" placeholder="Concave Points Error"
+                        required>
+                    <label for="symmetry_error">Symmetry Error</label>
+                    <input type="number" step="0.004" name="symmetry_error" placeholder="Symmetry Error" required>
+                    <label for="fractal_dimension_error">Fractal Dimension Error</label>
+                    <input type="number" step="0.004" name="fractal_dimension_error"
+                        placeholder="Fractal Dimension Error" required>
+                    <label for="worst_radius">Worst radius</label>
+                    <input type="number" step="0.004" name="worst_radius" placeholder="Worst radius" required>
+                    <label for="worst_texture">Worst texture</label>
+                    <input type="number" step="0.004" name="worst_texture" placeholder="Worst texture" required>
+                    <label for="worst_perimeter">Worst perimeter</label>
+                    <input type="number" step="0.004" name="worst_perimeter" placeholder="Worst perimeter" required>
+                    <label for="worst_area">Worst area</label>
+                    <input type="number" step="0.004" name="worst_area" placeholder="Worst area" required>
+                    <label for="worst_smoothness">Worst smoothness</label>
+                    <input type="number" step="0.004" name="worst_smoothness" placeholder="Worst smoothness" required>
+                    <label for="worst_compactness">Worst compactness</label>
+                    <input type="number" step="0.004" name="worst_compactness" placeholder="Worst compactness" required>
+                    <label for="worst_concavity">Worst concavity</label>
+                    <input type="number" step="0.004" name="worst_concavity" placeholder="Worst concavity" required>
+                    <label for="worst_concavepoints">Worst concave points</label>
+                    <input type="number" step="0.004" name="worst_concavepoints" placeholder="Worst concave points"
+                        required>
+                    <label for="worst_symmetry">Worst symmetry</label>
+                    <input type="number" step="0.004" name="worst_symmetry" placeholder="Worst symmetry" required>
+                    <label for="worst_fractal_dimension">Worst fractal dimension</label>
+                    <input type="number" step="0.004" name="worst_fractal_dimension"
+                        placeholder="Worst fractal dimension" required>
+                    <br><br>
+                    <center>
+                        <input type="submit" value="Check"></button>
+                    </center>
+                </center>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
